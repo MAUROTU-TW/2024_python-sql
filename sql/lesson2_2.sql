@@ -20,3 +20,13 @@ create table if not exists weather(
 	low real,
 	status varchar(7)
 	);
+
+
+create table if not exists station(
+	id serial primary key,
+	code varchar(20)not null unique,
+	name varchar(20)unique,
+	e_name varchar(20)unique
+	);
+
+	
