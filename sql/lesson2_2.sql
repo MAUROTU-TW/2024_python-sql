@@ -1,4 +1,4 @@
-DROP TABLE if exists hospital;
+DROP TABLE if exists station;
 
 create table if not exists hospital(
 	id serial primary key,
@@ -25,8 +25,8 @@ create table if not exists weather(
 create table if not exists station(
 	id serial primary key,
 	code varchar(20)not null unique,
-	name varchar(20)unique,
-	e_name varchar(20)unique
+	name varchar(50)unique,
+	e_name varchar(50)
 	);
 
 	
