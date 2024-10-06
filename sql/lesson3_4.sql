@@ -27,3 +27,5 @@ VALUES('華語','小李'),(數學,'小李')
 INSERT INTO student(major,name)
 VALUES('華語','小李'),('數學','小李')
 RETURNING *;
+
+DROP TABLE IF EXISTS student;
