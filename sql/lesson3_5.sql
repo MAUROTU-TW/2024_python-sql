@@ -6,10 +6,10 @@ CREATE TABLE IF NOT EXISTS student(
 	PRIMARY KEY (student_id)
 )
 
-INSERT INTO student VALUES(1,'小白','英語','50');
-INSERT INTO student VALUES(2,'小洪','華語','50');
-INSERT INTO student VALUES(3,'小黃','日語','50');
-INSERT INTO student VALUES(4,'小黑','美語','50');
+INSERT INTO student VALUES(1,'小白','英語',50);
+INSERT INTO student VALUES(2,'小洪','華語',50);
+INSERT INTO student VALUES(3,'小黃','日語',50);
+INSERT INTO student VALUES(4,'小黑','美語',50);
 
 INSERT INTO student 
 VALUES(1, '小白','英語',50),
