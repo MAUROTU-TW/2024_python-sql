@@ -56,5 +56,8 @@ ORDER BY code desc; /*數字字串排序*/
 
 SELECT id as 序號,code as 代碼, name as 車站名稱, e_name as 英文名稱
 FROM station
-ORDER BY e_name ;  /*英文字排序*/
+ORDER BY e_name   /*英文字排序*/
+Limit 10 ;     /*抓前10名*/
+
+
 
