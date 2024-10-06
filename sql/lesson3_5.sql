@@ -11,6 +11,7 @@ INSERT INTO student VALUES(2,'小洪','華語','50');
 INSERT INTO student VALUES(3,'小黃','日語','50');
 INSERT INTO student VALUES(4,'小黑','美語','50');
 
+
 DELETE FROM student; /*全刪*/
 
 DELETE FROM student
