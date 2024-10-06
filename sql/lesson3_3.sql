@@ -33,3 +33,28 @@ WHERE id<=10;
 SELECT id as 序號,code as 代碼, name as 車站名稱, e_name as 英文名稱
 FROM station
 WHERE id<=20 AND id>10;
+
+SELECT id as 序號,code as 代碼, name as 車站名稱, e_name as 英文名稱
+FROM station
+WHERE name = '基隆';
+
+SELECT id as 序號,code as 代碼, name as 車站名稱, e_name as 英文名稱
+FROM station
+WHERE id>20 or id<10;
+
+SELECT id as 序號,code as 代碼, name as 車站名稱, e_name as 英文名稱
+FROM station
+WHERE id not between 10 and 20;
+
+SELECT id as 序號,code as 代碼, name as 車站名稱, e_name as 英文名稱
+FROM station
+WHERE id between 10 and 20;
+
+SELECT id as 序號,code as 代碼, name as 車站名稱, e_name as 英文名稱
+FROM station
+ORDER BY code desc;
+
+SELECT id as 序號,code as 代碼, name as 車站名稱, e_name as 英文名稱
+FROM station
+ORDER BY e_name ;
+
