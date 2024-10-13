@@ -19,6 +19,7 @@ FROM customer;
 SELECT *
 FROM customer
 WHERE first_name='Jamie';
+
 SELECT *
 FROM customer
 WHERE first_name='Jamie' and last_name='Rice';
