@@ -11,8 +11,36 @@ WHERE date BETWEEN '2022-01-01' AND '2022-12-31';
 
 SELECT *
 FROM station_in_out;
-/*全台各站點2022年進站總人數*/
-SELECT stationname as 站名
+
+/*基隆2022年進站總人數*/
+SELECT stationname AS 站名, SUM(gateincomingcnt) AS 總進站人數
 FROM stations JOIN station_in_out ON stationcode = stacode
 /*WHERE date BETWEEN '2022-01-01' AND '2022-12-31';*/
-WHERE EXTRACT(YEAR FROM date) = 2022;
+WHERE EXTRACT(YEAR FROM date) = 2022 AND stationname='基隆'
+
+
+
+SELECT *
+FROM station_in_out;
+/*全省各站點2022年進站總人數*/
+
+SELECT stationname AS 站名, SUM(gateincomingcnt) AS 總進站人數
+FROM stations JOIN station_in_out ON stationcode = stacode
+/*WHERE date BETWEEN '2022-01-01' AND '2022-12-31';*/
+WHERE EXTRACT(YEAR FROM date) = 2022
+GROUP BY 站名
+HAVING SUM(gateincomingcnt)>=5000000
+ORDER BY 總進站人數 DESC;
+
+/*基隆火車站2020,每月份進站人數*/
+SELECT stationname AS 站名,date AS 日期,gateincomingcnt AS 每日進站人數
+FROM stations JOIN station_in_out ON stationcode = stacode
+/*WHERE date BETWEEN '2022-01-01' AND '2022-12-31';*/
+WHERE EXTRACT(YEAR FROM date) = 2022 AND stationname='基隆';
+
+/*基隆火車站2020,每月份進站人數*/
+SELECT stationname AS 站名, TO_CHAR(date,'YYYY-MM') AS 日期,SUM(gateincomingcnt) AS 進站人數小計
+FROM stations JOIN station_in_out ON stationcode = stacode
+/*WHERE date BETWEEN '2022-01-01' AND '2022-12-31';*/
+WHERE EXTRACT(YEAR FROM date) = 2022 AND stationname='基隆'
+GROUP BY 站名,日期;
