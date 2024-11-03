@@ -7,3 +7,5 @@ Pyarrow
 yfinance
 streamlit
 twstock
+Python-dotenv
+
