@@ -6,3 +6,4 @@ pandas-datareader
 Pyarrow
 yfinance
 streamlit
+twstock
