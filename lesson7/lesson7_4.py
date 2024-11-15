@@ -6,7 +6,7 @@ import os
 load_dotenv()
 
 #conn = psycopg2.connect(host=os.environ['POSTGRE_HOST'],database=os.environ['POSTGRE_DATABASE'],user=os.environ['POSTGRE_USER'],password=os.environ['POSTGRE_PASSWORD'])
-conn = psycopg2.connect(host='192.168.0.252',database="mydatabase_a21",user='a21',password='raspberry')
+conn = psycopg2.connect(host='dpg-csehq5jtq21c738c82g0-a.singapore-postgres.render.com',database="render_a21",user='render_a21_user',password='LtyqwUeXcgYPiPe9v4oBjlzm0vyOV9l9')
 with conn:
     with conn.cursor() as cursor:
         sql = '''
