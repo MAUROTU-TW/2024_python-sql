@@ -1,0 +1,11 @@
+psycopg2_binary
+streamlit
+psycopg2
+pandas
+pandas-datareader
+Pyarrow
+yfinance
+streamlit
+twstock
+Python-dotenv
+

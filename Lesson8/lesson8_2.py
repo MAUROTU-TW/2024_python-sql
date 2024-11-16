@@ -8,7 +8,7 @@ import pandas as pd
 
 @st.cache_data
 def getData(country:tuple[str])->list[tuple]:
-    conn = psycopg2.connect(host='dpg-csehq5jtq21c738c82g0-a.singapore-postgres.render.com',
+    conn = psycopg2.connect(host='dpg-csehq5jtq21c738c82g0-a',
                             database="render_a21",
                             user='render_a21_user',
                             password='LtyqwUeXcgYPiPe9v4oBjlzm0vyOV9l9')
@@ -27,7 +27,7 @@ def getData(country:tuple[str])->list[tuple]:
 
 @st.cache_resource
 def get_country():
-    conn = psycopg2.connect(host='dpg-csehq5jtq21c738c82g0-a.singapore-postgres.render.com',
+    conn = psycopg2.connect(host='dpg-csehq5jtq21c738c82g0-a',
                             database="render_a21",
                             user='render_a21_user',
                             password='LtyqwUeXcgYPiPe9v4oBjlzm0vyOV9l9')
